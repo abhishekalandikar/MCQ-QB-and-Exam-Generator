@@ -1,0 +1,69 @@
+﻿@model List<QuestionBanks.ViewModels.QuestionVM>
+
+@using (Html.BeginForm("CreateExam", "Question", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <h2>Exam</h2>
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <strong>@Model[i].Question1</strong>
+                        @Html.HiddenFor(m => Model[i].ID) <!-- Hidden field for Question ID -->
+                    </td>
+                    <td>
+                        <div>
+                            <label>
+                                <input type="radio" name="selectedAnswers[@i]" value="@Model[i].Option1" />
+                                @Model[i].Option1
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="selectedAnswers[@i]" value="@Model[i].Option2" />
+                                @Model[i].Option2
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="selectedAnswers[@i]" value="@Model[i].Option3" />
+                                @Model[i].Option3
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="selectedAnswers[@i]" value="@Model[i].Option4" />
+                                @Model[i].Option4
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="selectedAnswers[@i]" value="@Model[i].Option5" />
+                                @Model[i].Option5
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="selectedAnswers[@i]" value="@Model[i].Option6" />
+                                @Model[i].Option6
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Submit Exam</button>
+}

@@ -1,0 +1,96 @@
+﻿@model QuestionBanks.Entities.Question
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Question1)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd>
+            @if (Model.Image != null && Model.Image.Length > 0) // Check if the byte array is not null or empty
+            {
+                var base64Image = Convert.ToBase64String(Model.Image);
+                var imgSrc = $"data:/png;base64,{base64Image}"; // Fixed the data URL format
+                <img src="@imgSrc" alt="Question Image" width="100" height="100" />
+            }
+            else
+            {
+                <span>No Image</span>
+            }
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Question1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Option1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Option1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Option2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Option2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Option3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Option3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Option4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Option4)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerHint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerHint)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorrectAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorrectAnswer)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="pt15">
+    <input type="submit" value="Delete" class="btn btn-default" /> 
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-warning " })
+</div>
+    }
+</div>

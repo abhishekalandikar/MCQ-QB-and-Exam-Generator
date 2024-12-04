@@ -1,0 +1,107 @@
+﻿@model IEnumerable<QuestionBanks.Entities.Question>
+
+@{
+    ViewBag.Title = "Questions List";
+}
+
+<h2>Questions List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Question1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Option1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Option2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Option3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Option4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Option5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Option6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().CorrectAnswer)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.First().AnswerHint)
+            </th>*@
+            @*<th>
+            @Html.DisplayName("Image")
+        </th>*@
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var question in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => question.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => question.Question1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => question.Option1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => question.Option2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => question.Option3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => question.Option4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => question.Option5)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => question.Option6)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => question.CorrectAnswer)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => question.AnswerHint)
+                </td>*@
+                @*<td>
+            @if (question.Image != null && question.Image.Length > 0) // Check if the byte array is not null or empty
+            {
+                var base64Image = Convert.ToBase64String(question.Image);
+                var imgSrc = $"data:/png;base64,{base64Image}";
+                <img src="@imgSrc" alt="Question Image" width="100" height="100" />
+            }
+            else
+            {
+                <span>No Image</span>
+            }
+        </td>*@
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = question.ID }, new { @class = "btn btn-sm btn-primary" })
+                    @Html.ActionLink("Details", "Details", new { id = question.ID }, new { @class = "btn btn-sm btn-warning" })
+                    @Html.ActionLink("Delete", "Delete", new { id = question.ID }, new { @class = "btn btn-sm btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="col-md-2 text-right" style="margin-left:-20px">
+    <a href="/Question/Create" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>Create New Question</a>
+</div>
+    
