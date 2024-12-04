@@ -24,9 +24,12 @@ This project is a robust MCQ Question Bank and Exam Generator designed to simpli
   10.Add images to questions for visual-based learning or evaluation.
 
 ## Technologies Used
-Frontend: HTML, CSS, JavaScript (for user interface and interaction).
-Backend: ASP.NET MVC (for server-side operations).
-Database: SQL Server (to store questions and user responses).
+
+  Frontend: HTML, CSS, JavaScript 
+  
+  Backend: ASP.NET MVC 
+  
+  Database: SQL Server 
 
 
 ## Use Cases
