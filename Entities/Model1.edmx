@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="institute_parikshaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InstituteID" Type="int" Nullable="false" />
+          <Property Name="ImportedFileID" Type="int" Nullable="false" />
+          <Property Name="Question" Type="varchar(max)" Nullable="false" />
+          <Property Name="Option1" Type="varchar(max)" Nullable="false" />
+          <Property Name="Option2" Type="varchar(max)" Nullable="false" />
+          <Property Name="Option3" Type="varchar(max)" Nullable="false" />
+          <Property Name="Option4" Type="varchar(max)" Nullable="false" />
+          <Property Name="Option5" Type="varchar(max)" />
+          <Property Name="Option6" Type="varchar(max)" />
+          <Property Name="OptionCount" Type="smallint" />
+          <Property Name="AnswerHint" Type="varchar(max)" Nullable="false" />
+          <Property Name="OptionHint1" Type="varchar(max)" />
+          <Property Name="OptionHint2" Type="varchar(max)" />
+          <Property Name="OptionHint3" Type="varchar(max)" />
+          <Property Name="OptionHint4" Type="varchar(max)" />
+          <Property Name="OptionHint5" Type="varchar(max)" />
+          <Property Name="OptionHint6" Type="varchar(max)" />
+          <Property Name="QuestionInfo" Type="varchar" MaxLength="1000" />
+          <Property Name="IsMultichoise" Type="bit" Nullable="false" />
+          <Property Name="CorrectAnswer" Type="smallint" Nullable="false" />
+          <Property Name="IsCorrectAnswer1" Type="bit" Nullable="false" />
+          <Property Name="IsCorrectAnswer2" Type="bit" Nullable="false" />
+          <Property Name="IsCorrectAnswer3" Type="bit" Nullable="false" />
+          <Property Name="IsCorrectAnswer4" Type="bit" Nullable="false" />
+          <Property Name="IsCorrectAnswer5" Type="bit" Nullable="false" />
+          <Property Name="IsCorrectAnswer6" Type="bit" Nullable="false" />
+          <Property Name="Marks" Type="int" Nullable="false" />
+          <Property Name="Time" Type="int" Nullable="false" />
+          <Property Name="Complexity" Type="smallint" Nullable="false" />
+          <Property Name="CertificationID" Type="int" Nullable="false" />
+          <Property Name="StandardID" Type="int" Nullable="false" />
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+          <Property Name="TopicID" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varbinary(max)" />
+        </EntityType>
+        <EntityContainer Name="institute_parikshaModelStoreContainer">
+          <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="institute_parikshaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InstituteID" Type="Int32" Nullable="false" />
+          <Property Name="ImportedFileID" Type="Int32" Nullable="false" />
+          <Property Name="Question1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Option1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Option2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Option3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Option4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Option5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Option6" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OptionCount" Type="Int16" />
+          <Property Name="AnswerHint" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OptionHint1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OptionHint2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OptionHint3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OptionHint4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OptionHint5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OptionHint6" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QuestionInfo" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="IsMultichoise" Type="Boolean" Nullable="false" />
+          <Property Name="CorrectAnswer" Type="Int16" Nullable="false" />
+          <Property Name="IsCorrectAnswer1" Type="Boolean" Nullable="false" />
+          <Property Name="IsCorrectAnswer2" Type="Boolean" Nullable="false" />
+          <Property Name="IsCorrectAnswer3" Type="Boolean" Nullable="false" />
+          <Property Name="IsCorrectAnswer4" Type="Boolean" Nullable="false" />
+          <Property Name="IsCorrectAnswer5" Type="Boolean" Nullable="false" />
+          <Property Name="IsCorrectAnswer6" Type="Boolean" Nullable="false" />
+          <Property Name="Marks" Type="Int32" Nullable="false" />
+          <Property Name="Time" Type="Int32" Nullable="false" />
+          <Property Name="Complexity" Type="Int16" Nullable="false" />
+          <Property Name="CertificationID" Type="Int32" Nullable="false" />
+          <Property Name="StandardID" Type="Int32" Nullable="false" />
+          <Property Name="SubjectID" Type="Int32" Nullable="false" />
+          <Property Name="TopicID" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="institute_parikshaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Questions" EntityType="Self.Question" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="institute_parikshaModelStoreContainer" CdmEntityContainer="institute_parikshaEntities">
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="institute_parikshaModel.Question">
+              <MappingFragment StoreEntitySet="Question">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="InstituteID" ColumnName="InstituteID" />
+                <ScalarProperty Name="ImportedFileID" ColumnName="ImportedFileID" />
+                <ScalarProperty Name="Question1" ColumnName="Question" />
+                <ScalarProperty Name="Option1" ColumnName="Option1" />
+                <ScalarProperty Name="Option2" ColumnName="Option2" />
+                <ScalarProperty Name="Option3" ColumnName="Option3" />
+                <ScalarProperty Name="Option4" ColumnName="Option4" />
+                <ScalarProperty Name="Option5" ColumnName="Option5" />
+                <ScalarProperty Name="Option6" ColumnName="Option6" />
+                <ScalarProperty Name="OptionCount" ColumnName="OptionCount" />
+                <ScalarProperty Name="AnswerHint" ColumnName="AnswerHint" />
+                <ScalarProperty Name="OptionHint1" ColumnName="OptionHint1" />
+                <ScalarProperty Name="OptionHint2" ColumnName="OptionHint2" />
+                <ScalarProperty Name="OptionHint3" ColumnName="OptionHint3" />
+                <ScalarProperty Name="OptionHint4" ColumnName="OptionHint4" />
+                <ScalarProperty Name="OptionHint5" ColumnName="OptionHint5" />
+                <ScalarProperty Name="OptionHint6" ColumnName="OptionHint6" />
+                <ScalarProperty Name="QuestionInfo" ColumnName="QuestionInfo" />
+                <ScalarProperty Name="IsMultichoise" ColumnName="IsMultichoise" />
+                <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+                <ScalarProperty Name="IsCorrectAnswer1" ColumnName="IsCorrectAnswer1" />
+                <ScalarProperty Name="IsCorrectAnswer2" ColumnName="IsCorrectAnswer2" />
+                <ScalarProperty Name="IsCorrectAnswer3" ColumnName="IsCorrectAnswer3" />
+                <ScalarProperty Name="IsCorrectAnswer4" ColumnName="IsCorrectAnswer4" />
+                <ScalarProperty Name="IsCorrectAnswer5" ColumnName="IsCorrectAnswer5" />
+                <ScalarProperty Name="IsCorrectAnswer6" ColumnName="IsCorrectAnswer6" />
+                <ScalarProperty Name="Marks" ColumnName="Marks" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Complexity" ColumnName="Complexity" />
+                <ScalarProperty Name="CertificationID" ColumnName="CertificationID" />
+                <ScalarProperty Name="StandardID" ColumnName="StandardID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
