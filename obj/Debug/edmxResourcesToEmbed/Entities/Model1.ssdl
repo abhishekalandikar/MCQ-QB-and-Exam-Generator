@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="institute_parikshaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstituteID" Type="int" Nullable="false" />
+    <Property Name="ImportedFileID" Type="int" Nullable="false" />
+    <Property Name="Question" Type="varchar(max)" Nullable="false" />
+    <Property Name="Option1" Type="varchar(max)" Nullable="false" />
+    <Property Name="Option2" Type="varchar(max)" Nullable="false" />
+    <Property Name="Option3" Type="varchar(max)" Nullable="false" />
+    <Property Name="Option4" Type="varchar(max)" Nullable="false" />
+    <Property Name="Option5" Type="varchar(max)" />
+    <Property Name="Option6" Type="varchar(max)" />
+    <Property Name="OptionCount" Type="smallint" />
+    <Property Name="AnswerHint" Type="varchar(max)" Nullable="false" />
+    <Property Name="OptionHint1" Type="varchar(max)" />
+    <Property Name="OptionHint2" Type="varchar(max)" />
+    <Property Name="OptionHint3" Type="varchar(max)" />
+    <Property Name="OptionHint4" Type="varchar(max)" />
+    <Property Name="OptionHint5" Type="varchar(max)" />
+    <Property Name="OptionHint6" Type="varchar(max)" />
+    <Property Name="QuestionInfo" Type="varchar" MaxLength="1000" />
+    <Property Name="IsMultichoise" Type="bit" Nullable="false" />
+    <Property Name="CorrectAnswer" Type="smallint" Nullable="false" />
+    <Property Name="IsCorrectAnswer1" Type="bit" Nullable="false" />
+    <Property Name="IsCorrectAnswer2" Type="bit" Nullable="false" />
+    <Property Name="IsCorrectAnswer3" Type="bit" Nullable="false" />
+    <Property Name="IsCorrectAnswer4" Type="bit" Nullable="false" />
+    <Property Name="IsCorrectAnswer5" Type="bit" Nullable="false" />
+    <Property Name="IsCorrectAnswer6" Type="bit" Nullable="false" />
+    <Property Name="Marks" Type="int" Nullable="false" />
+    <Property Name="Time" Type="int" Nullable="false" />
+    <Property Name="Complexity" Type="smallint" Nullable="false" />
+    <Property Name="CertificationID" Type="int" Nullable="false" />
+    <Property Name="StandardID" Type="int" Nullable="false" />
+    <Property Name="SubjectID" Type="int" Nullable="false" />
+    <Property Name="TopicID" Type="int" Nullable="false" />
+    <Property Name="Image" Type="varbinary(max)" />
+  </EntityType>
+  <EntityContainer Name="institute_parikshaModelStoreContainer">
+    <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
