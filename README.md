@@ -31,5 +31,7 @@ Database: SQL Server (to store questions and user responses).
 
 ## Use Cases
   Online quizzes and mock tests.
+  
   Education institutions for managing exams.
+  
   Practice tests for competitive exams.
